@@ -2,6 +2,6 @@
 compress :: (Eq a) => [a] -> [a]
 compress [] = []
 compress [x] = [x]
-compress (x:y:ys) =
-    let rest = compress (y : ys)
-    in if x == y then rest else x : rest
+compress (x:xs) =
+    let rest = compress xs
+    in if x == head xs then rest else x : rest
