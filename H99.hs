@@ -16,7 +16,7 @@ pack (x:xs) =
 data Element a = Single a | Multiple Int a
     deriving (Show)
 
-encodeModified :: (Eq a) => [a] => [Element a]
+encodeModified :: (Eq a) => [a] -> [Element a]
 encodeModified xs = [
     if length x == 1
     then Single (head x)
